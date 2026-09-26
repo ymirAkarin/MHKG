@@ -1,0 +1,895 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.metal_exposure_health.com/ontology#"
+     xml:base="http://www.metal_exposure_health.com/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="http://www.metal_exposure_health.com/ontology#">
+    <owl:Ontology rdf:about="http://www.metal_exposure_health.com/ontology">
+        <owl:versionIRI rdf:resource="http://www.metal_exposure_health.com/ontology/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- http://www.metal_exposure_health.com/ontology#affectsBiomarker -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#affectsBiomarker">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Metal affects a biomarker.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Metal"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Biomarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#assistsDiagnosisOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#assistsDiagnosisOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Biomarker assists diagnosis of a disease.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Biomarker"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#contactsMetal -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#contactsMetal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Exposure route contacts or introduces a metal.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Exposure_Route"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Metal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#detectsBiomarker -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#detectsBiomarker">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Clinical diagnostic procedure detects a biomarker.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Biomarker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#diagnosesDisease -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#diagnosesDisease">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Clinical diagnostic procedure diagnoses a disease.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#exposedThrough -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#exposedThrough">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Occupational population is exposed through an exposure route.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Occupational_Population"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Exposure_Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#hasJobType -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#hasJobType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Occupational population has a job type.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Occupational_Population"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Job_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#hasWorkplaceAndProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#hasWorkplaceAndProcess">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Industry scenario contains or corresponds to a workplace or process.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Industry_Scenario"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Workplace_and_Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#induces -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#induces">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Metal induces a pathogenic mechanism.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Metal"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Pathogenic_Mechanism"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#interruptsExposureRoute -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#interruptsExposureRoute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Prevention measure interrupts an exposure route.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Prevention_Measure"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Exposure_Route"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#intervene -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#intervene">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Clinical treatment intervenes in a disease.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Treatment"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#involvesPopulation -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#involvesPopulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Industry scenario involves an occupational population.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Industry_Scenario"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Occupational_Population"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#leadsToDisease -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#leadsToDisease">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Pathogenic mechanism leads to a disease.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Pathogenic_Mechanism"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#preventsAndControlsDisease -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#preventsAndControlsDisease">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Prevention measure prevents or controls a disease.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Prevention_Measure"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#suggestsPreventionMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#suggestsPreventionMeasure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Biomarker suggests a prevention measure.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Biomarker"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Prevention_Measure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#useOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.metal_exposure_health.com/ontology#useOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">Clinical diagnostic information guides, selects, or evaluates a treatment.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+        <rdfs:range rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Treatment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- http://www.metal_exposure_health.com/ontology#Age_Range -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Age_Range">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Occupational_Population"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Biomarker_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Biomarker_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Efficacy_Biomarker"/>
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Susceptibility_Biomarker"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Clinical_Manifestations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Clinical_Manifestations">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Disease_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Disease_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Element_Symbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Element_Symbol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Single_Metal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Exposure_Biomarker_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Exposure_Biomarker_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Exposure_Biomarker"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Exposure_Biomarker_Sample_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Exposure_Biomarker_Sample_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Exposure_Biomarker"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Imaging_Examination_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Imaging_Examination_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Imaging_Examination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Industry_Category -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Industry_Category">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Industry_Scenario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Industry_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Industry_Description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Industry_Scenario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Industry_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Industry_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Industry_Scenario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Job_Responsibilities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Job_Responsibilities">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Job_Type"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Job_Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Job_Title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Job_Type"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Measure_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Measure_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Source_Prevention"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Measured_Domain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Measured_Domain">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Scale_Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Mechanism_Pathway -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Mechanism_Pathway">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Pathogenic_Mechanism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Metal_Mixture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Metal_Mixture">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Composite_Metal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Metal_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Metal_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Single_Metal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Onset_Time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Onset_Time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Present_Illness_History_Investigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Outcome_Metrics -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Outcome_Metrics">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Prevention"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Pathophysiology_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Pathophysiology_Description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Pathogenic_Mechanism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Physical_Examination_Items -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Physical_Examination_Items">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Physical_Examination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Population_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Population_Description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Occupational_Population"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Prevention_Measure_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Prevention_Measure_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Clinical_Prevention"/>
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Health_Screening"/>
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Prevention_Measure"/>
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Source_Prevention"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Prevention_Protocol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Prevention_Protocol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Prevention"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Process_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Process_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Workplace_and_Process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Questionnaire_Items -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Questionnaire_Items">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Exposure_History_Investigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Reference_Range -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Reference_Range">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Efficacy_Biomarker"/>
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Exposure_Biomarker"/>
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Susceptibility_Biomarker"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Relevant_Organ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Relevant_Organ">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Efficacy_Biomarker"/>
+                    <rdf:Description rdf:about="http://www.metal_exposure_health.com/ontology#Susceptibility_Biomarker"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Route_Category -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Route_Category">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Exposure_Route"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Sample_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Sample_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Laboratory_Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Scale_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Scale_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Scale_Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Score_Range -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Score_Range">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Scale_Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Screened_Population -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Screened_Population">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Health_Screening"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Screening_Tests -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Screening_Tests">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Health_Screening"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Severity_Level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Severity_Level">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Present_Illness_History_Investigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Symptom_Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Symptom_Description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Present_Illness_History_Investigation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Target_Organ/System -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Target_Organ/System">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Disease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Target_Population -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Target_Population">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Source_Prevention"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Test_Items -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Test_Items">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Laboratory_Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Treatment_Metrics -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Treatment_Metrics">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Treatment_Protocol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Treatment_Protocol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Workplace_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.metal_exposure_health.com/ontology#Workplace_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.metal_exposure_health.com/ontology#Workplace_and_Process"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- http://www.metal_exposure_health.com/ontology#Biomarker -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Biomarker">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Clinical_Prevention -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Clinical_Prevention">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Prevention_Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Clinical_Scale_Assessment -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Clinical_Scale_Assessment">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Clinical_Treatment -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Clinical_Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Composite_Metal -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Composite_Metal">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Metal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Disease -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Disease">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Efficacy_Biomarker -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Efficacy_Biomarker">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Biomarker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Exposure_Biomarker -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Exposure_Biomarker">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Biomarker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Exposure_History_Investigation -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Exposure_History_Investigation">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Exposure_Route -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Exposure_Route">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Health_Screening -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Health_Screening">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Prevention_Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Imaging_Examination -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Imaging_Examination">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Industry_Scenario -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Industry_Scenario">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Job_Type -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Job_Type">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Occupational_Population"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Laboratory_Test -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Laboratory_Test">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Metal -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Metal">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Occupational_Population -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Occupational_Population">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Pathogenic_Mechanism -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Pathogenic_Mechanism">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Physical_Examination -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Physical_Examination">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Present_Illness_History_Investigation -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Present_Illness_History_Investigation">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Clinical_Diagnostic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Prevention_Measure -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Prevention_Measure">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Single_Metal -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Single_Metal">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Metal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Source_Prevention -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Source_Prevention">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Prevention_Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Susceptibility_Biomarker -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Susceptibility_Biomarker">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Biomarker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.metal_exposure_health.com/ontology#Workplace_and_Process -->
+
+    <owl:Class rdf:about="http://www.metal_exposure_health.com/ontology#Workplace_and_Process">
+        <rdfs:subClassOf rdf:resource="http://www.metal_exposure_health.com/ontology#Industry_Scenario"/>
+    </owl:Class>
+    
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated in Protégé-compatible RDF/XML layout from Extraction_Prompt_Concentraed_En.md -->
